@@ -1,0 +1,376 @@
+{
+	"info": {
+		"_postman_id": "0432dfd1-d51a-4368-aaef-27b25fe0e795",
+		"name": "appEnvios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listCLients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appPaquetes/resources/clientes/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appPaquetes",
+						"resources",
+						"clientes",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search Client by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appPaquetes/resources/clientes/get?id=81549",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appPaquetes",
+						"resources",
+						"clientes",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "81549"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search Client by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appPaquetes/resources/clientes/get?name=gregory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appPaquetes",
+						"resources",
+						"clientes",
+						"get"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "gregory"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "hola",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "chau",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/appPaquetes/resources/clientes/register?nombre=hola&apellido=chau",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appPaquetes",
+						"resources",
+						"clientes",
+						"register"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "hola"
+						},
+						{
+							"key": "apellido",
+							"value": "chau"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register Driver",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appPaquetes/resources/camion/altaConductor?nombre=hola&apellido=chau&city=MAR_DEL_PLATA&state=BUENOS_AIRES&documento=12312324",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appPaquetes",
+						"resources",
+						"camion",
+						"altaConductor"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "hola"
+						},
+						{
+							"key": "apellido",
+							"value": "chau"
+						},
+						{
+							"key": "city",
+							"value": "MAR_DEL_PLATA"
+						},
+						{
+							"key": "state",
+							"value": "BUENOS_AIRES"
+						},
+						{
+							"key": "documento",
+							"value": "12312324"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register truck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appPaquetes/resources/camion/altaCamion?matricula=hola&pesoMax=1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appPaquetes",
+						"resources",
+						"camion",
+						"altaCamion"
+					],
+					"query": [
+						{
+							"key": "matricula",
+							"value": "hola"
+						},
+						{
+							"key": "pesoMax",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "startTrip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appPaquetes/resources/camion/salidaViaje?ID=123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appPaquetes",
+						"resources",
+						"camion",
+						"salidaViaje"
+					],
+					"query": [
+						{
+							"key": "ID",
+							"value": "123456"
+						},
+						{
+							"key": "pesoMax",
+							"value": "1000",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endTrip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appPaquetes/resources/camion/llegadaViaje?ID=123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appPaquetes",
+						"resources",
+						"camion",
+						"llegadaViaje"
+					],
+					"query": [
+						{
+							"key": "ID",
+							"value": "123456"
+						},
+						{
+							"key": "pesoMax",
+							"value": "1000",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register trailer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appPaquetes/resources/camion/altaTrailer?matricula=hola&pesoMax=1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appPaquetes",
+						"resources",
+						"camion",
+						"altaTrailer"
+					],
+					"query": [
+						{
+							"key": "matricula",
+							"value": "hola"
+						},
+						{
+							"key": "pesoMax",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appPaquetes/resources/pedidos/create?clientId=15462",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appPaquetes",
+						"resources",
+						"pedidos",
+						"create"
+					],
+					"query": [
+						{
+							"key": "clientId",
+							"value": "15462"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createPackage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appPaquetes/resources/pedidos/createPackage?recipientID=37518&orderID=88840&cost=1.5&weight=1.5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appPaquetes",
+						"resources",
+						"pedidos",
+						"createPackage"
+					],
+					"query": [
+						{
+							"key": "recipientID",
+							"value": "37518"
+						},
+						{
+							"key": "orderID",
+							"value": "88840"
+						},
+						{
+							"key": "cost",
+							"value": "1.5"
+						},
+						{
+							"key": "weight",
+							"value": "1.5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
